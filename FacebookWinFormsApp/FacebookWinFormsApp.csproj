@@ -1,0 +1,222 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\CefSharp.Common.112.3.0\build\CefSharp.Common.props" Condition="Exists('..\packages\CefSharp.Common.112.3.0\build\CefSharp.Common.props')" />
+  <Import Project="..\packages\cef.redist.x86.112.3.0\build\cef.redist.x86.props" Condition="Exists('..\packages\cef.redist.x86.112.3.0\build\cef.redist.x86.props')" />
+  <Import Project="..\packages\cef.redist.x64.112.3.0\build\cef.redist.x64.props" Condition="Exists('..\packages\cef.redist.x64.112.3.0\build\cef.redist.x64.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D7EBEAA1-D021-4395-A8D9-A2D5C3A40E39}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>BasicFacebookFeatures</RootNamespace>
+    <AssemblyName>FacebookWinFormsApp</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>
+    </StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CefSharp, Version=112.3.0.0, Culture=neutral, PublicKeyToken=40c4b6fc221f4138, processorArchitecture=MSIL">
+      <HintPath>..\packages\CefSharp.Common.112.3.0\lib\net452\CefSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="CefSharp.Core, Version=112.3.0.0, Culture=neutral, PublicKeyToken=40c4b6fc221f4138, processorArchitecture=MSIL">
+      <HintPath>..\packages\CefSharp.Common.112.3.0\lib\net452\CefSharp.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="CefSharp.WinForms, Version=112.3.0.0, Culture=neutral, PublicKeyToken=40c4b6fc221f4138, processorArchitecture=MSIL">
+      <HintPath>..\packages\CefSharp.WinForms.112.3.0\lib\net462\CefSharp.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Facebook">
+      <HintPath>..\FBApi\Facebook.dll</HintPath>
+    </Reference>
+    <Reference Include="FbGraphApiWrapper">
+      <HintPath>..\FBApi\FbGraphApiWrapper.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="eFeature.cs" />
+    <Compile Include="FormBiggerPicture.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBiggerPicture.Designer.cs">
+      <DependentUpon>FormBiggerPicture.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormFeature.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormFeature.Designer.cs">
+      <DependentUpon>FormFeature.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormFeatureFactory.cs" />
+    <Compile Include="FormFetchAlbums.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormFetchAlbums.Designer.cs">
+      <DependentUpon>FormFetchAlbums.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormFlowManager.cs" />
+    <Compile Include="FormFriendshipTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormFriendshipTest.Designer.cs">
+      <DependentUpon>FormFriendshipTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormFriendshipTestQuestion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormFriendshipTestQuestion.Designer.cs">
+      <DependentUpon>FormFriendshipTestQuestion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLogin.Designer.cs">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMain.Designer.cs">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMemories.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMemories.Designer.cs">
+      <DependentUpon>FormMemories.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListBoxPopulator{T}.cs" />
+    <Compile Include="MemoriesItemsCollection.cs" />
+    <Compile Include="MemoriesSearch.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FormBiggerPicture.resx">
+      <DependentUpon>FormBiggerPicture.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormFeature.resx">
+      <DependentUpon>FormFeature.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormFetchAlbums.resx">
+      <DependentUpon>FormFetchAlbums.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormFriendshipTest.resx">
+      <DependentUpon>FormFriendshipTest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormFriendshipTestQuestion.resx">
+      <DependentUpon>FormFriendshipTestQuestion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLogin.resx">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMain.resx">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMemories.resx">
+      <DependentUpon>FormMemories.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Logic\Logic.csproj">
+      <Project>{076b7042-5569-4b2b-8d40-9f9d2120b963}</Project>
+      <Name>Logic</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\facebooklogo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Properties\DataSources\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\children-sold-facebook.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\giphyClapping.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\giphySad.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ok-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hiring-_facebook-_post_template2x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Actions-help-about-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Images-icon.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\cef.redist.x64.112.3.0\build\cef.redist.x64.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\cef.redist.x64.112.3.0\build\cef.redist.x64.props'))" />
+    <Error Condition="!Exists('..\packages\cef.redist.x86.112.3.0\build\cef.redist.x86.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\cef.redist.x86.112.3.0\build\cef.redist.x86.props'))" />
+    <Error Condition="!Exists('..\packages\CefSharp.Common.112.3.0\build\CefSharp.Common.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\CefSharp.Common.112.3.0\build\CefSharp.Common.props'))" />
+    <Error Condition="!Exists('..\packages\CefSharp.Common.112.3.0\build\CefSharp.Common.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\CefSharp.Common.112.3.0\build\CefSharp.Common.targets'))" />
+  </Target>
+  <Import Project="..\packages\CefSharp.Common.112.3.0\build\CefSharp.Common.targets" Condition="Exists('..\packages\CefSharp.Common.112.3.0\build\CefSharp.Common.targets')" />
+</Project>
