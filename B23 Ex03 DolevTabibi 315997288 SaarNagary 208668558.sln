@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33516.290
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Logic", "Logic\Logic.csproj", "{076B7042-5569-4B2B-8D40-9F9D2120B963}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FacebookWinFormsApp", "FacebookWinFormsApp\FacebookWinFormsApp.csproj", "{D7EBEAA1-D021-4395-A8D9-A2D5C3A40E39}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{076B7042-5569-4B2B-8D40-9F9D2120B963}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{076B7042-5569-4B2B-8D40-9F9D2120B963}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{076B7042-5569-4B2B-8D40-9F9D2120B963}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{076B7042-5569-4B2B-8D40-9F9D2120B963}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D7EBEAA1-D021-4395-A8D9-A2D5C3A40E39}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D7EBEAA1-D021-4395-A8D9-A2D5C3A40E39}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D7EBEAA1-D021-4395-A8D9-A2D5C3A40E39}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D7EBEAA1-D021-4395-A8D9-A2D5C3A40E39}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {631E8E60-97CC-4CB1-A6BA-40CEDFA84E82}
+	EndGlobalSection
+EndGlobal
