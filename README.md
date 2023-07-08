@@ -10,7 +10,6 @@
     **NOTE:** Only Facebook developer users can sign in to the application, and the friends list will only display Facebook developer users.
 
 
-
 # Screenshots: 
 ![image](https://github.com/dolevtabibi/FacebookApplication/assets/88586308/53eaae04-03a4-4672-ae8b-88230a9e662c)
 ![image](https://github.com/dolevtabibi/FacebookApplication/assets/88586308/4d9ca990-4bf5-4ecf-84f1-d85796fadc86)
